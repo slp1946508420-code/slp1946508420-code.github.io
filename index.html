@@ -1,47 +1,229 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luping Shen</title>
+  <style>
+    /* ============================================================
+       Style inspired by minimalist designer portfolios:
+       huge display name, generous whitespace, one strong intro,
+       quiet lists, simple footer. Blue used sparingly as accent.
+       ============================================================ */
+    :root {
+      --ink:    #101418;   /* near-black text */
+      --muted:  #6b7280;   /* secondary text */
+      --accent: #1d4ed8;   /* blue accent (links, hover) */
+      --line:   #e5e7eb;   /* hairline dividers */
+      --bg:     #fafafa;   /* off-white background */
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ===== Top nav ===== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+    nav .links a { margin-left: 28px; text-transform: uppercase; }
+
+    /* ===== Hero: huge name + photo ===== */
+    .hero { padding: 48px 0 72px; }
+
+    .hero h1 {
+      font-size: clamp(3rem, 11vw, 7rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      text-transform: uppercase;
+    }
+
+    .hero .role {
+      margin-top: 16px;
+      font-size: 1rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-photo {
+      margin-top: 48px;
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+      filter: grayscale(20%);
+    }
+
+    /* ===== Big intro paragraph ===== */
+    .intro { padding: 72px 0; border-top: 1px solid var(--line); }
+    .intro p {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+      max-width: 860px;
+    }
+    .intro p .quiet { color: var(--muted); }
+
+    /* ===== Sections ===== */
+    section { padding: 64px 0; border-top: 1px solid var(--line); }
+
+    .section-label {
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    /* research interests: large quiet list */
+    .big-list { list-style: none; }
+    .big-list li {
+      font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+      font-weight: 500;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      transition: color 0.2s, padding-left 0.2s;
+    }
+    .big-list li:hover { color: var(--accent); padding-left: 10px; }
+
+    /* education rows */
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+    .row .what { font-weight: 500; }
+    .row .when { color: var(--muted); }
+
+    /* ===== Footer / contact ===== */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 72px 0 56px;
+    }
+    footer .cta {
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 36px;
+    }
+    footer .cta a { border-bottom: 3px solid var(--accent); }
+    footer .contact-links {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    footer .copyright {
+      margin-top: 48px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 32px 0 48px; }
+      section, .intro { padding: 48px 0; }
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="zh"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Luping的个人网站&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 700px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 40px auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.8;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1 { color: #1a5fb4; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h2 { border-bottom: 2px solid #eee; padding-bottom: 8px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a { color: #1a5fb4; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;你好,我是Luping 👋&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;欢迎来到我的个人网站。这里会放我的介绍、想法和作品。&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;关于我&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;(在这里写一两句自我介绍,比如你的职业、专业或兴趣)&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;联系我&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;邮箱:&lt;a href="mailto:your@email.com"&gt;your@email.com&lt;/a&gt;&lt;/p&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="wrap">
+
+    <!-- ===== Navigation ===== -->
+    <nav>
+      <a href="#" style="font-weight:700;">Luping Shen</a>       <!-- ← your name -->
+      <div class="links">
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ===== Hero: big name + photo ===== -->
+    <header class="hero">
+      <h1>Luping<br>Shen</h1>                                    <!-- ← your name, one word per line -->
+      <div class="role">PhD Student in Finance · University of Technology Sydney</div>
+      <!-- Photo: upload a file named photo.jpg next to index.html -->
+      <img class="hero-photo" src="photo.jpg" alt="Portrait of Luping Shen">
+    </header>
+
+    <!-- ===== Intro statement ===== -->
+    <div class="intro">
+      <p>
+        I'm a PhD student in Finance at the
+        <span class="quiet">University of Technology Sydney</span>.
+        My research focuses on Corporate Finance.
+      </p>
+      <!-- ← replace the two XXX with your actual research focus -->
+    </div>
+
+    <!-- ===== Research interests ===== -->
+    <section id="research">
+      <div class="section-label">Research Interests</div>
+      <ul class="big-list">
+        <li>Research Direction One</li>       <!-- ← edit / add / remove lines -->
+        <li>Research Direction Two</li>
+        <li>Research Direction Three</li>
+      </ul>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section>
+      <div class="section-label">Education</div>
+      <div class="row">
+        <span class="what">PhD in Finance — University of Technology Sydney</span>
+        <span class="when">Nov 2025 — Present</span>       <!-- ← fill in your start year -->
+      </div>
+      <div class="row">
+        <span class="what">Bsc in Financial Engineering — Zhejiang University of Finance and Economics
+
+        </span>   <!-- ← your previous degree(s) -->
+        <span class="when">Sept 2018 — Jun 2022</span>
+      </div>
+      <!-- ← edit or add rows for your earlier education -->
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <footer id="contact">
+      <div class="cta">
+        Let's <a href="mailto:Luping.Shen@student.uts.edu.au">connect</a>.
+      </div>
+      <div class="contact-links">
+        <a href="mailto:Luping.Shen@student.uts.edu.au">Luping.Shen@student.uts.edu.au</a>       <!-- ← your email (both places) -->
+        <span>UTS Business School (Building 8), UTS, Building 8, 14/28 Ultimo Rd, Ultimo NSW 2007</span>
+      </div>
+      <div class="copyright">© 2026 Luping Shen</div>
+    </footer>
+
+  </div>
 </body>
 </html>
