@@ -89,6 +89,7 @@
       max-width: 860px;
     }
     .intro p .quiet { color: var(--muted); }
+    .intro p a.quiet:hover { color: var(--accent); }   /* grey link turns blue on hover */
 
     /* ===== Sections ===== */
     section { padding: 64px 0; border-top: 1px solid var(--line); }
@@ -121,6 +122,8 @@
       border-bottom: 1px solid var(--line);
       flex-wrap: wrap;
     }
+    /* no divider under the last item: the next section's top line is enough */
+    .big-list li:last-child, .row:last-child { border-bottom: none; }
     .row .what { font-weight: 500; }
     .row .when { color: var(--muted); }
 
@@ -180,19 +183,19 @@
     <div class="intro">
       <p>
         I'm a PhD student in Finance at the
-        <span class="quiet">University of Technology Sydney</span>.
-        My research focuses on Corporate Finance.
+        <a class="quiet" href="https://www.uts.edu.au" target="_blank" rel="noopener">University of Technology Sydney</a>.
+        My research focuses on Corporate Finance and Empirical Asset Pricing.
+        I am supervised by
+        <a class="quiet" href="https://profiles.uts.edu.au/Vitali.Alexeev" target="_blank" rel="noopener">A/Prof Vitali Alexeev</a>.
       </p>
-      <!-- ← replace the two XXX with your actual research focus -->
     </div>
 
     <!-- ===== Research interests ===== -->
     <section id="research">
       <div class="section-label">Research Interests</div>
       <ul class="big-list">
-        <li>Research Direction One</li>       <!-- ← edit / add / remove lines -->
-        <li>Research Direction Two</li>
-        <li>Research Direction Three</li>
+        <li>Corporate Finance</li>            <!-- ← edit / add / remove lines -->
+        <li>Empirical Asset Pricing</li>
       </ul>
     </section>
 
@@ -214,9 +217,7 @@
 
     <!-- ===== Contact ===== -->
     <footer id="contact">
-      <div class="cta">
-        Let's <a href="mailto:Luping.Shen@student.uts.edu.au">connect</a>.
-      </div>
+      <div class="section-label">Contact</div>
       <div class="contact-links">
         <a href="mailto:Luping.Shen@student.uts.edu.au">Luping.Shen@student.uts.edu.au</a>       <!-- ← your email (both places) -->
         <span>UTS Business School (Building 8), UTS, Building 8, 14/28 Ultimo Rd, Ultimo NSW 2007</span>
